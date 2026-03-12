@@ -29,7 +29,8 @@
     <title>Planificador de Calificaciones • GPA Tracker</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <style>
+
+        <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
         
         body {
@@ -50,6 +51,15 @@
             border: 1px solid rgba(255,255,255,0.1);
         }
         
+        /* CORRECCIÓN INPUTS MODO OSCURO */
+        .dark input {
+            color: white !important;
+            background-color: rgba(24, 24, 27, 1) !important; /* Zinc-900 */
+        }
+        .dark input::placeholder {
+            color: #71717a !important;
+        }
+        
         /* LIGHT MODE */
         body {
             background: linear-gradient(to bottom right, #f8fafc, #e0f2fe, #f8fafc);
@@ -60,6 +70,11 @@
             backdrop-filter: blur(16px);
             border: 1px solid rgba(148, 163, 184, 0.2);
             box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+        
+        /* CORRECCIÓN INPUTS MODO CLARO */
+        input {
+            color: #0f172a !important;
         }
         
         .dark .glass {
@@ -100,7 +115,14 @@
         body:not(.dark) .bg-slate-100 { background-color: #f1f5f9 !important; }
         body:not(.dark) .bg-white\/60 { background-color: #f8fafc !important; }
         body:not(.dark) .border-white\/10 { border-color: #e2e8f0 !important; }
+
+        /* Evitar estilos nativos de autocompletado que rompen el diseño */
+        input:-webkit-autofill {
+            -webkit-text-fill-color: inherit !important;
+            transition: background-color 5000s ease-in-out 0s;
+        }
     </style>
+
 </head>
 <body class="min-h-screen">
     <div class="tail-container px-4 py-6 sm:py-8">
