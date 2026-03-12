@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, follow">
+    <meta name="description" content="Política de Privacidad del GPA Tracker. Procesamiento 100% local en tu navegador. Sin subir datos, sin almacenamiento, máxima privacidad.">
+    <title>Política de Privacidad | GPA Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        .title-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        /* DARK MODE */
+        .dark body {
+            background: linear-gradient(to bottom right, #18181b, #000000, #18181b);
+            color: white;
+        }
+        .dark .glass {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* LIGHT MODE */
+        body {
+            background: linear-gradient(to bottom right, #f8fafc, #e0f2fe, #f8fafc);
+            color: #0f172a;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+        
+        .dark .glass {
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3);
+        }
+        
+        .tail-container {
+            max-width: 880px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        @media (max-width: 640px) {
+            .glass {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="tail-container px-4 py-8">
+        <!-- HEADER (igual que en tu GPA Tracker) -->
+        <div class="flex items-center justify-between mb-12">
+            <div class="flex items-center gap-x-4">
+                <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-2xl flex items-center justify-center shadow-xl shadow-violet-500/30">
+                    <i class="fa-solid fa-chart-line text-3xl"></i>
+                </div>
+                <div>
+                    <h1 class="title-font text-4xl font-semibold tracking-tighter">GPA Tracker</h1>
+                    <p class="text-zinc-400 dark:text-zinc-400 text-sm -mt-1">Política de Privacidad</p>
+                </div>
+            </div>
+            
+            <!-- Botón modo claro/oscuro (igual que en tu app) -->
+            <button onclick="toggleTheme()" id="themeBtn"
+                    class="w-11 h-11 flex items-center justify-center bg-white/10 hover:bg-white/20 dark:bg-white/10 dark:hover:bg-white/20 border border-white/10 rounded-2xl transition-all active:scale-95">
+                <i id="themeIcon" class="fa-solid fa-moon text-xl"></i>
+            </button>
+        </div>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="glass border border-white/10 dark:border-white/10 rounded-3xl p-10 md:p-14">
+            <div class="text-center mb-10">
+                <i class="fa-solid fa-shield-halved text-6xl text-violet-500 mb-6"></i>
+                <h1 class="title-font text-4xl font-semibold tracking-tighter text-slate-900 dark:text-white">Política de Privacidad</h1>
+                <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-2"><strong>Última actualización: Marzo 2026</strong></p>
+            </div>
+
+            <div class="prose prose-slate dark:prose-invert max-w-none">
+                <p class="text-lg">Tu privacidad es nuestra prioridad absoluta. El <strong>GPA Tracker</strong> funciona 100% en tu navegador y <strong>no recopila ni almacena ningún dato</strong>.</p>
+
+                <h2 class="text-2xl font-semibold text-violet-600 dark:text-violet-400 mt-10">Procesamiento 100% Local</h2>
+                <p>Todo el cálculo de promedios, proyecciones y notas necesarias se realiza directamente en tu dispositivo. Eso significa que:</p>
+                <ul class="list-disc pl-6 space-y-3 text-base">
+                    <li>Tus materias, notas y datos <strong>nunca se suben</strong> a ningún servidor.</li>
+                    <li>Al refrescar o cerrar la página, <strong>todo se borra automáticamente</strong>.</li>
+                    <li>No hay registro, email ni cuenta necesaria.</li>
+                    <li>No almacenamos, analizamos ni compartimos nada con terceros.</li>
+                </ul>
+
+                <h2 class="text-2xl font-semibold text-violet-600 dark:text-violet-400 mt-10">¿Qué datos manejamos?</h2>
+                <p><strong>Ninguno de forma permanente.</strong> Solo trabajamos con los datos que ingresás temporalmente en memoria del navegador mientras usás la herramienta.</p>
+
+                <h2 class="text-2xl font-semibold text-violet-600 dark:text-violet-400 mt-10">Descargas (PDF y Excel)</h2>
+                <p>Cuando generás un PDF o Excel, el archivo se crea y se descarga directamente en tu dispositivo. Nosotros no guardamos ninguna copia.</p>
+
+                <h2 class="text-2xl font-semibold text-violet-600 dark:text-violet-400 mt-10">Cookies y Seguimiento</h2>
+                <p>Usamos solo las cookies técnicas mínimas necesarias para el modo claro/oscuro. No utilizamos cookies de publicidad ni herramientas de rastreo.</p>
+
+                <h2 class="text-2xl font-semibold text-violet-600 dark:text-violet-400 mt-10">Seguridad</h2>
+                <p>Al no existir servidor, es técnicamente imposible que ocurra una filtración desde nuestra plataforma. Vos sos el único que tiene acceso a tus calificaciones.</p>
+
+                <h2 class="text-2xl font-semibold text-violet-600 dark:text-violet-400 mt-10">Cambios en esta Política</h2>
+                <p>Podemos actualizar esta página ocasionalmente. La versión más reciente siempre estará disponible aquí.</p>
+
+                <div class="mt-12 text-center">
+                    <a href="gpa-tracker.html" 
+                       class="inline-flex items-center gap-x-2 text-violet-600 dark:text-violet-400 font-semibold hover:underline">
+                        ← Volver al GPA Tracker
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER (igual estilo que tu app) -->
+        <div class="mt-16 text-center text-xs text-zinc-500 dark:text-zinc-500 border-t border-slate-200 dark:border-white/10 pt-8">
+            Planificador de Calificaciones • Máxima privacidad • Datos se borran al refrescar la página
+        </div>
+
+        <!-- Cafecito (mantenido tal cual) -->
+        <div class="text-center mt-12">
+            <p class="text-sm text-emerald-600 dark:text-emerald-400 font-medium">Todo esto es GRATIS y 100% privado gracias a gente como vos ☕</p>
+            <a href="https://cafecito.app/thaurock" target="_blank" class="inline-block mt-4">
+                <img src="https://cdn.cafecito.app/imgs/buttons/button_5.svg" alt="Apoyá con un cafecito" class="h-12">
+            </a>
+            <p class="mt-8 text-[10px] text-zinc-500">© 2026 THAUROCK • Todos los derechos reservados</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const isDark = document.documentElement.classList.toggle('dark');
+            const icon = document.getElementById('themeIcon');
+            if (isDark) {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            } else {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        }
+
+        // Inicia siempre en modo oscuro (igual que tu GPA Tracker)
+        window.onload = () => {
+            document.documentElement.classList.add('dark');
+        };
+    </script>
+</body>
+</html>
