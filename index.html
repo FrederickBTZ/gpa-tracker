@@ -31,88 +31,87 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
         <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
-        
-        body {
-            font-family: 'Inter', system_ui, sans-serif;
-        }
-        .title-font {
-            font-family: 'Space Grotesk', sans-serif;
-        }
-        
-        /* DARK MODE */
-        .dark body {
-            background: linear-gradient(to bottom right, #18181b, #000000, #18181b);
-            color: white;
-        }
-        .dark .glass {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        /* CORRECCIÓN INPUTS MODO OSCURO */
-        .dark input {
-            color: white !important;
-            background-color: #1685f5 !important; /* Zinc-800 */
-        }
-        .dark input::placeholder {
-            color: #000405 !important;
-        }
-        
-        /* LIGHT MODE */
-        body {
-            background: linear-gradient(to bottom right, #f8fafc, #e0f2fe, #f8fafc);
-            color: #0f172a;
-        }
-        .glass {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(148, 163, 184, 0.2);
-            box-shadow: 0 10px 15px -3px rgb(22, 133, 245 / 0.1);
-        }
-        
-        /* CORRECCIÓN INPUTS MODO CLARO */
-        .dark input {
-            color: white !important;
-            background-color: #1685f5 !important; /* Zinc-800 */
-        }
-        .dark input::placeholder {
-            color: #000405 !important;
-        }
-        
-        /* RESPONSIVIDAD */
-        @media (max-width: 640px) {
-            .header-buttons { flex-wrap: wrap; gap: 8px; justify-content: center; }
-            .header-buttons button { flex: 1; min-width: 110px; }
-            .glass { padding: 20px; }
-            .title-font { font-size: 1.75rem; }
-        }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+    
+    body {
+        font-family: 'Inter', system_ui, sans-serif;
+    }
+    .title-font {
+        font-family: 'Space Grotesk', sans-serif;
+    }
+    
+    /* DARK MODE */
+    .dark body {
+        background: linear-gradient(to bottom right, #18181b, #000000, #18181b);
+        color: white;
+    }
+    .dark .glass {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    /* CORRECCIÓN INPUTS MODO OSCURO */
+    .dark input {
+        color: white !important;
+        background-color: #1685f5 !important;
+    }
+    .dark input::placeholder {
+        color: #000405 !important;
+    }
+    
+    /* LIGHT MODE */
+    body {
+        background: linear-gradient(to bottom right, #f8fafc, #e0f2fe, #f8fafc);
+        color: #0f172a;
+    }
+    .glass {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        box-shadow: 0 10px 15px -3px rgb(22, 133, 245 / 0.1);
+    }
 
-        /* === MEJORA EXCLUSIVA PARA MODO CLARO (solo este detalle) === */
-        body:not(.dark) .text-zinc-400 { color: #64748b !important; }
-        body:not(.dark) .text-zinc-500 { color: #475569 !important; }
-        body:not(.dark) .glass {
-            background: #ffffff !important;
-            border: 1px solid #cbd5e1 !important;
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.08) !important;
-        }
-        body:not(.dark) .bg-white\/70 { background-color: #f8fafc !important; }
-        body:not(.dark) .border-slate-200 { border-color: #e2e8f0 !important; }
-        body:not(.dark) .text-slate-900 { color: #0f172a !important; }
-        body:not(.dark) .text-slate-700 { color: #334155 !important; }
-        body:not(.dark) .text-slate-600 { color: #475569 !important; }
-        body:not(.dark) .bg-slate-100 { background-color: #f1f5f9 !important; }
-        body:not(.dark) .bg-white\/60 { background-color: #f8fafc !important; }
-        body:not(.dark) .border-white\/10 { border-color: #e2e8f0 !important; }
+    /* === CORRECCIÓN INPUTS MODO CLARO === */
+    body:not(.dark) input {
+        color: white !important;
+        background-color: #1685f5 !important;
+    }
+    body:not(.dark) input::placeholder {
+        color: #000405 !important;
+    }
 
-        /* Evitar estilos nativos de autocompletado que rompen el diseño */
-        input:-webkit-autofill {
-            -webkit-text-fill-color: inherit !important;
-            transition: background-color 5000s ease-in-out 0s;
-        }
-    </style>
+    /* RESPONSIVIDAD */
+    @media (max-width: 640px) {
+        .header-buttons { flex-wrap: wrap; gap: 8px; justify-content: center; }
+        .header-buttons button { flex: 1; min-width: 110px; }
+        .glass { padding: 20px; }
+        .title-font { font-size: 1.75rem; }
+    }
 
+    /* === MEJORA EXCLUSIVA PARA MODO CLARO === */
+    body:not(.dark) .text-zinc-400 { color: #64748b !important; }
+    body:not(.dark) .text-zinc-500 { color: #475569 !important; }
+    body:not(.dark) .glass {
+        background: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.08) !important;
+    }
+    body:not(.dark) .bg-white\/70 { background-color: #f8fafc !important; }
+    body:not(.dark) .border-slate-200 { border-color: #e2e8f0 !important; }
+    body:not(.dark) .text-slate-900 { color: #0f172a !important; }
+    body:not(.dark) .text-slate-700 { color: #334155 !important; }
+    body:not(.dark) .text-slate-600 { color: #475569 !important; }
+    body:not(.dark) .bg-slate-100 { background-color: #f1f5f9 !important; }
+    body:not(.dark) .bg-white\/60 { background-color: #f8fafc !important; }
+    body:not(.dark) .border-white\/10 { border-color: #e2e8f0 !important; }
+
+    /* Evitar estilos nativos de autocompletado */
+    input:-webkit-autofill {
+        -webkit-text-fill-color: inherit !important;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+        </style>
 </head>
 <body class="min-h-screen">
     <div class="tail-container px-4 py-6 sm:py-8">
