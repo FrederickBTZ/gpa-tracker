@@ -69,25 +69,16 @@
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(16px);
             border: 1px solid rgba(148, 163, 184, 0.2);
+            box-shadow: 0 10px 15px -3px rgb(22, 133, 245 / 0.1);
         }
         
         /* CORRECCIÓN INPUTS MODO CLARO */
-        input {
-            color: #1685f5 !important;
+        .dark input {
+            color: white !important;
+            background-color: #1685f5 !important; /* Zinc-800 */
         }
-        
-        .dark .glass {
-            box-shadow: 0 10px 15px -3px rgb(22, 133, 245 / 0.3);
-        }
-        
-        table {
-            border-collapse: separate;
-            border-spacing: 0 8px;
-        }
-        .tail-container {
-            max-width: 1280px;
-            margin-left: auto;
-            margin-right: auto;
+        .dark input::placeholder {
+            color: #000405 !important;
         }
         
         /* RESPONSIVIDAD */
