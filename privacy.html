@@ -50,7 +50,21 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
+        /* === CORRECCIÓN ESPECÍFICA PARA MODO CLARO (título H1 visible) === */
+        body:not(.dark) .title-font {
+            color: #0f172a !important;
+        }
+        body:not(.dark) h2 {
+            color: #1e40af !important;
+        }
+        body:not(.dark) .text-zinc-500 {
+            color: #475569 !important;
+        }
+        body:not(.dark) .prose strong {
+            color: #1e40af;
+        }
+
         @media (max-width: 640px) {
             .glass {
                 padding: 24px;
@@ -60,7 +74,7 @@
 </head>
 <body class="min-h-screen">
     <div class="tail-container px-4 py-8">
-        <!-- HEADER (igual que en tu GPA Tracker) -->
+        <!-- HEADER -->
         <div class="flex items-center justify-between mb-12">
             <div class="flex items-center gap-x-4">
                 <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-2xl flex items-center justify-center shadow-xl shadow-violet-500/30">
@@ -72,7 +86,6 @@
                 </div>
             </div>
             
-            <!-- Botón modo claro/oscuro (igual que en tu app) -->
             <button onclick="toggleTheme()" id="themeBtn"
                     class="w-11 h-11 flex items-center justify-center bg-white/10 hover:bg-white/20 dark:bg-white/10 dark:hover:bg-white/20 border border-white/10 rounded-2xl transition-all active:scale-95">
                 <i id="themeIcon" class="fa-solid fa-moon text-xl"></i>
@@ -83,7 +96,7 @@
         <div class="glass border border-white/10 dark:border-white/10 rounded-3xl p-10 md:p-14">
             <div class="text-center mb-10">
                 <i class="fa-solid fa-shield-halved text-6xl text-violet-500 mb-6"></i>
-                <h1 class="title-font text-4xl font-semibold tracking-tighter text-slate-900 dark:text-white">Política de Privacidad</h1>
+                <h1 class="title-font text-4xl font-semibold tracking-tighter text-slate-950 dark:text-white">Política de Privacidad</h1>
                 <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-2"><strong>Última actualización: Marzo 2026</strong></p>
             </div>
 
@@ -123,12 +136,12 @@
             </div>
         </div>
 
-        <!-- FOOTER (igual estilo que tu app) -->
+        <!-- FOOTER -->
         <div class="mt-16 text-center text-xs text-zinc-500 dark:text-zinc-500 border-t border-slate-200 dark:border-white/10 pt-8">
             Planificador de Calificaciones • Máxima privacidad • Datos se borran al refrescar la página
         </div>
 
-        <!-- Cafecito (mantenido tal cual) -->
+        <!-- Cafecito -->
         <div class="text-center mt-12">
             <p class="text-sm text-emerald-600 dark:text-emerald-400 font-medium">Todo esto es GRATIS y 100% privado gracias a gente como vos ☕</p>
             <a href="https://cafecito.app/thaurock" target="_blank" class="inline-block mt-4">
@@ -151,7 +164,6 @@
             }
         }
 
-        // Inicia siempre en modo oscuro (igual que tu GPA Tracker)
         window.onload = () => {
             document.documentElement.classList.add('dark');
         };
